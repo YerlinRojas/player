@@ -1,0 +1,81 @@
+.container {
+    padding: 0;
+    margin: 0.5em auto;
+    width: 360px;
+    background-color: var(--gris-claro);
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.container:hover {
+    transform: scale(1.03);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.capa {
+    width: 100%;
+    height: 200px; /* Ajustar altura para un diseño uniforme */
+    object-fit: cover;
+    border-bottom: 1px solid var(--gris-medio);
+}
+
+.container h2 {
+    font-size: 1em;
+    font-weight: bold;
+    color: var(--negro);
+    margin: 0.5em 1em;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.link {
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    flex-direction: column;
+}
+
+.favorito {
+    margin: 0.5em 1em;
+    width: 25px;
+    cursor: pointer;
+    transition: transform 0.2s ease, filter 0.2s ease;
+}
+
+.favorito:hover {
+    transform: scale(1.2);
+    filter: brightness(1.2);
+}
+
+.actions {
+    display: flex;
+    justify-content: center; /* Centra los botones horizontalmente */
+    align-items: center; /* Alinea los botones verticalmente */
+    padding: 0.5em 1em;
+    gap: 10px; /* Reduce el espacio entre los botones */
+    border-top: 1px solid var(--gris-medio);
+}
+.btnNoFormat{
+    border: none;
+    background-color: transparent;
+}
+
+
+.btnEliminar,
+.btnEditar {
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+    transition: transform 0.2s ease, filter 0.2s ease;
+}
+
+.btnEliminar:hover,
+.btnEditar:hover {
+    transform: scale(1.2);
+    filter: brightness(1.2);
+}
