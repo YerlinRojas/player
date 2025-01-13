@@ -1,0 +1,65 @@
+.container {
+    max-width: 500px; /* Ancho máximo del formulario */
+    margin: 2rem auto; /* Centra el formulario vertical y horizontalmente */
+    padding: 2rem;
+    background-color: var(--gris-claro); /* Color de fondo */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para darle profundidad */
+  }
+  
+  h2 {
+    text-align: center; /* Centra el título */
+    font-size: 1.5rem;
+    color: var(--azul); /* Cambia por tu variable de color preferida */
+    margin-bottom: 1.5rem;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 1rem;
+    font-weight: bold;
+    color: var(--negro); /* Cambia por tu variable de color preferida */
+  }
+  
+  input {
+    width: 100%; /* Ocupa todo el ancho del contenedor */
+    padding: 0.5rem;
+    border: 1px solid var(--gris-medio);
+    border-radius: 5px;
+    margin-top: 0.5rem;
+    font-size: 1rem;
+    color: var(--negro);
+  }
+  
+  input:focus {
+    outline: none;
+    border-color: var(--azul);
+    box-shadow: 0 0 4px var(--azul);
+  }
+  
+  button {
+    display: block;
+    width: 100%; /* Botón del mismo ancho que el input */
+    padding: 0.75rem;
+    margin-top: 1.5rem;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #1d006c;
+    background-color: var(--azul);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: var(--azul-oscuro);
+  }
+  
+  p {
+    color: red;
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+    text-align: center; /* Centra el mensaje de error */
+  }
+  

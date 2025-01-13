@@ -9,7 +9,7 @@ function Favoritos() {
 
   return (
     <>
-      <Banner img="favorite" color="#44d97d" />
+      <Banner img="favoritos" color="#154580" />
       <Titulo>
         <h1>Mis favoritos</h1>
       </Titulo>

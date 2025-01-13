@@ -1,7 +1,6 @@
 .container {
     padding: 0;
-    margin: 0.5em auto;
-    width: 360px;
+    margin: 0.5em;
     background-color: var(--gris-claro);
     display: flex;
     flex-direction: column;
@@ -9,73 +8,67 @@
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     overflow: hidden;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.container:hover {
+    width: 100%; 
+    max-width: 360px; 
+    height: auto; 
+  }
+  
+  .container:hover {
     transform: scale(1.03);
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
-}
-
-.capa {
+  }
+  
+  .capa {
     width: 100%;
-    height: 200px; /* Ajustar altura para un diseño uniforme */
+    height: 200px; 
     object-fit: cover;
     border-bottom: 1px solid var(--gris-medio);
-}
+  }
 
-.container h2 {
-    font-size: 1em;
-    font-weight: bold;
-    color: var(--negro);
-    margin: 0.5em 1em;
-    text-overflow: ellipsis;
-    overflow: hidden;
-    white-space: nowrap;
-}
-
-.link {
-    text-decoration: none;
-    color: inherit;
-    display: flex;
-    flex-direction: column;
-}
-
-.favorito {
-    margin: 0.5em 1em;
-    width: 25px;
-    cursor: pointer;
-    transition: transform 0.2s ease, filter 0.2s ease;
-}
-
-.favorito:hover {
-    transform: scale(1.2);
-    filter: brightness(1.2);
-}
-
-.actions {
-    display: flex;
-    justify-content: center; /* Centra los botones horizontalmente */
-    align-items: center; /* Alinea los botones verticalmente */
+  .actions {
+    display: grid;
+    grid-template-columns: repeat(3, auto); 
+    justify-content: center; 
+    align-items: center; 
     padding: 0.5em 1em;
-    gap: 10px; /* Reduce el espacio entre los botones */
+    gap: 1rem;
     border-top: 1px solid var(--gris-medio);
-}
-.btnNoFormat{
-    border: none;
-    background-color: transparent;
-}
-
-
-.btnEliminar,
-.btnEditar {
-    width: 24px;
-    height: 24px;
+  }
+  .favorito {
+    margin: 0.5em 1em;
+    width: 20px;
+    height: 20px; 
     cursor: pointer;
     transition: transform 0.2s ease, filter 0.2s ease;
+  }
+
+
+.btnEditar  {
+    width: 17px; 
+    height: 17px;
+    cursor: pointer;
+    transition: transform 0.2s ease, filter 0.2s ease;
+  }
+
+
+  .btnEliminar{
+  width: 20px; 
+  height: 20px;
+  cursor: pointer;
+  transition: transform 0.2s ease, filter 0.2s ease;
 }
 
+.favorito:hover,
 .btnEliminar:hover,
 .btnEditar:hover {
-    transform: scale(1.2);
-    filter: brightness(1.2);
+  transform: scale(1.2);
+  filter: brightness(1.2);
 }
+
+@media (max-width: 768px) {
+    .actions {
+      grid-template-columns: 1fr; 
+      gap: 0.5rem; 
+    }
+  }
+  

@@ -7,7 +7,7 @@ import btnEditar from "./edit.png"
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom"
 
-function Card({ id, capa, titulo, onEliminar, onEditar }) {
+function Card({ id, capa, titulo, onEliminar}) {
   const navigate = useNavigate()
   const { favorito, agregarFavorito } = useFavoritosContext()
   const isFavorito = favorito.some(fav => fav.id === id)
@@ -30,11 +30,11 @@ function Card({ id, capa, titulo, onEliminar, onEditar }) {
   src={btnEliminar}
   alt="Eliminar"
   className={styles.btnEliminar}
-  onClick={() => onEliminar(id)} // Llama a la función pasada como prop
+  onClick={() => onEliminar(id)} 
 />
         <button
           className={styles.btnNoFormat}
-          onClick={() => navigate(`/editar/${id}`)} // Redirige al formulario
+          onClick={() => navigate(`/editar/${id}`)} 
         >
           <img className={styles.btnEditar} src={btnEditar} alt="Editar" />
         </button>

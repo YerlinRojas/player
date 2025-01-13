@@ -2,6 +2,7 @@ import { useParams, useNavigate } from "react-router-dom";
 import { useState } from "react";
 import { useVideos } from "context/VideosContext";
 import { fetchVideos } from "utils/fetchVideos";
+import styles from "./EditForm.module.css"
 
 const EditForm = () => {
   const { videos, setVideos } = useVideos(); // Ahora accedemos a videos y setVideos desde el contexto
@@ -88,9 +89,9 @@ const EditForm = () => {
   };
 
   return (
-    <div>
+    <div className={styles.container}>
       <h2>Editar Video</h2>
-      {error && <p style={{ color: "red" }}>{error}</p>}
+      {error && <p className={styles.error}>{error}</p>}
       <form onSubmit={handleSubmit}>
         <label>
           Título:
@@ -102,7 +103,6 @@ const EditForm = () => {
             required
           />
         </label>
-        <br />
         <label>
           URL de la imagen:
           <input
@@ -113,7 +113,6 @@ const EditForm = () => {
             required
           />
         </label>
-        <br />
         <button type="submit">Guardar Cambios</button>
       </form>
     </div>
