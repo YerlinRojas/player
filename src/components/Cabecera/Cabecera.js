@@ -7,13 +7,13 @@ import CabeceraLink from 'components/CabeceraLink/CabeceraLink'
 function Cabecera() {
   return (
     <header className={styles.cabecera}>
-    <Link to='/'>
+    <Link to='./home'>
         <section className={styles.logoContainer}>
     <img src={logo} alt='logo Alura' /> <span>cinema</span>
         </section>
     </Link>    
     <nav>
-        <CabeceraLink url='./' >
+        <CabeceraLink url='./home' >
             Home
         </CabeceraLink>
         <CabeceraLink url='./Favoritos' >

@@ -31,7 +31,7 @@ function AppRoutes() {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<PaginaBase />}>
-          <Route index element={<Inicio />} />
+          <Route path="/home" element={<Inicio />} />
           <Route path="favoritos" element={<Favoritos />} />
           <Route path=":id" element={<Player />} />
           <Route path="crear" element={<CrearVideo />} />
