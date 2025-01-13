@@ -9,7 +9,7 @@ function CrearVideo() {
   const [link, setLink] = useState("");
   const { setVideos, videos } = useVideos();
   const navigate = useNavigate();
-
+  const videoData = Array.isArray(videos) ? videos : videos?.videos || []
   const handleSubmit = (e) => {
     e.preventDefault();
     const nuevoVideo = {
@@ -20,10 +20,10 @@ function CrearVideo() {
     };
 
     // Agregar el nuevo video al contexto
-    setVideos([...videos, nuevoVideo]);
+    setVideos([...videoData, nuevoVideo]);
 
     // Redirigir al inicio después de la creación
-    navigate("/");
+    navigate("/home");
   };
 
   return (

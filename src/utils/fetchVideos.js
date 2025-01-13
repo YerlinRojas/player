@@ -21,7 +21,7 @@
         throw new Error("Error al cargar los videos");
       }
       const data = await response.json();
-      return data; // Aquí retornamos los datos de los videos desde la API
+      return data; 
     } catch (error) {
       console.error(error);
       throw error;

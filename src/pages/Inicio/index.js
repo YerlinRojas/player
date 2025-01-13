@@ -2,7 +2,6 @@ import Banner from "components/Banner/Banner"
 import Card from "components/Card"
 import Titulo from "components/Titulo"
 import styles from "./index.module.css"
-import { useEffect, useState } from "react"
 //import videos from "/db.json"
 import { useVideos } from "context/VideosContext";
 /* function Inicio(){
@@ -59,10 +58,11 @@ export default Inicio */
 }
 
 export default Inicio; */
+
 function Inicio() {
   const { videos, setVideos, loading, error } = useVideos();
-  const videoData = videos?.videos || [];  // Asegúrate de acceder correctamente a los videos
-
+  //const videoData = videos; 
+  const videoData = Array.isArray(videos) ? videos : videos?.videos || []; 
   // Maneja la eliminación de un video
   const handleEliminar = (id) => {
     const confirmacion = window.confirm("¿Estás seguro de que deseas eliminar este video?");
@@ -81,7 +81,7 @@ function Inicio() {
     return <div>Error al cargar los videos: {error}</div>;
   }
 
-  console.log(videoData);  // Revisa en la consola la estructura de los datos
+  console.log("estructura de data",videoData);  // Revisa en la consola la estructura de los datos
 
   return (
     <div>

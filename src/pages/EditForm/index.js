@@ -80,7 +80,7 @@ const EditForm = () => {
 
       // 6. Navega de vuelta a la página principal
       console.log("Navegando de vuelta a la página principal...");
-      navigate(`/editar/${id}`);
+      navigate("/home");
     } catch (error) {
       console.error("Error capturado en el bloque try-catch:", error);
       setError("Hubo un error al guardar los cambios. Por favor, inténtalo de nuevo.");

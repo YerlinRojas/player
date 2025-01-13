@@ -1,11 +1,13 @@
 import Banner from "components/Banner/Banner";
-import styles from "./Player.module.css";
+import styles from "./VideoDetail.module.css";
 import Titulo from "components/Titulo";
 import { useParams } from "react-router-dom";
 import NotFound from "pages/NotFound";
 import { useEffect, useState } from "react";
 import { useVideos } from "context/VideosContext"; // Importa el contexto
-function Player() {
+
+function VideoDetail() {
+
   const { id } = useParams(); // Obtiene el id desde los parámetros de la URL
   const { videos, loading, error } = useVideos(); // Obtiene los videos desde el contexto
   const [video, setVideo] = useState(null);
@@ -44,4 +46,4 @@ function Player() {
   );
 }
 
-export default Player;
+export default VideoDetail;

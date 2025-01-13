@@ -7,6 +7,10 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { useVideos } from "context/VideosContext"
 import EditForm from "pages/EditForm";
 import CrearVideo from "pages/CrearVideo";
+import VideoDetail from "pages/VideoDetail";
+
+
+
 function AppRoutes() {
   const { videos, loading, error, setVideos } = useVideos(); // Accede a los videos desde el contexto
 
@@ -40,6 +44,7 @@ function AppRoutes() {
             path="/editar/:id"
             element={<EditForm videos={videos} onEdit={handleEdit} />}
           />
+          <Route path="/video/:id" element={<VideoDetail/>} />
         </Route>
       </Routes>
     </BrowserRouter>
